@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Design System — Biolo Agora */
+
+@layer base {
+  :root {
+    /* Brand Colors */
+    --background: 0 0% 98%;
+    --foreground: 220 20% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 10%;
+
+    /* Primary — vibrant green */
+    --primary: 145 70% 38%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 145 60% 92%;
+    --primary-glow: 145 70% 50%;
+
+    /* Secondary — warm amber accent */
+    --secondary: 38 95% 94%;
+    --secondary-foreground: 38 80% 25%;
+
+    --muted: 220 14% 95%;
+    --muted-foreground: 220 10% 50%;
+
+    --accent: 145 70% 38%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 4 80% 58%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 14% 89%;
+    --input: 220 14% 89%;
+    --ring: 145 70% 38%;
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(145 70% 32%), hsl(145 60% 48%));
+    --card-shadow: 0 4px 24px -4px hsl(145 70% 20% / 0.12);
+    --card-shadow-hover: 0 12px 40px -8px hsl(145 70% 20% / 0.22);
+    --amber: 38 95% 55%;
+    --amber-light: 38 95% 94%;
+
+    --sidebar-background: 220 20% 10%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 145 70% 38%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 20% 16%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 220 20% 16%;
+    --sidebar-ring: 145 70% 38%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    background: var(--hero-gradient);
+  }
+  .card-shadow {
+    box-shadow: var(--card-shadow);
+  }
+  .card-shadow-hover {
+    box-shadow: var(--card-shadow-hover);
+  }
+  .text-amber {
+    color: hsl(var(--amber));
+  }
+  .bg-amber-light {
+    background-color: hsl(var(--amber-light));
+  }
+  .bg-primary-light {
+    background-color: hsl(var(--primary-light));
+  }
+}
